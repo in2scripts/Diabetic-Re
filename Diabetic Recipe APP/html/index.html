@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<style type="text/css">
+    /* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+.centered-element {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width:100%;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;font-size: 20px;
+}
+.panel p{
+    border-bottom: 1px solid #eee;
+}
+.btn a{
+    color: white;
+
+}
+.btn{
+    border: 1px solid #eee;
+    width: 90%;
+    padding: 35px;
+    margin: 4%;
+    background-color: #000000;
+
+}
+        .accordion{
+        font-weight:bold;
+    
+}
+    .panel, .accordion{ font-size: 20px;
+  }
+    .ref{
+        border: 1px #eee solid;
+        padding: 7px;
+        margin: 7px;
+    color: white;
+        font-size: 20px;
+        background-color: BLACK;}
+    
+    ul{
+        list-style:decimal;
+    }ul li{
+        padding: 20px;
+        border-bottom: 1px solid #eee;
+    }.copl{
+        list-style: none;
+        margin-left: -40px;
+    }
+    input{
+        width:30px;
+        height: 30px;
+        
+  accent-color: #e7f478;
+    }
+   
+    input:checked + label{
+ background: #e7f478;
+        margin: 10px;
+}
+    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+    
+    <div align="center"><a href="#doc" class="ref">Reload</a> <a href="#view-home" class="ref">View Online Recipes</a></div>
+        <h2>No Recipes added</h2><script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    } </script></body>
+</html>
+
